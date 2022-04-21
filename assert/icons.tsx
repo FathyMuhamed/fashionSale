@@ -38,7 +38,7 @@ export const UserIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="icon"
-    width="26"
+    width="26" 
     height="27"
     viewBox="0 0 24 24"
     strokeWidth="1.5"
@@ -53,3 +53,4 @@ export const UserIcon = () => (
     <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
   </svg>
 );
+

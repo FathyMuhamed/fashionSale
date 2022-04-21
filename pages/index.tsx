@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Button } from '../styles';
 import Link from 'next/link';
 const Main = styled.div`
-  /* grid-template-columns: repeat(auto-fill, minmax(250px, 40vw)); */
   font-size: 2.3rem;
   height: 100vh;
   display: flex;
@@ -23,7 +22,6 @@ const Main = styled.div`
     padding-top: 1.5rem;
   }
 `;
-
 
 function Home() {
   return (

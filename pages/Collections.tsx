@@ -19,14 +19,6 @@ const CollectionsPage = styled.div`
       padding: 0 1.4rem;
     }
   }
-  /* @media ${QUERIES.mobile} {
-    aside {
-      display: flex;
-      padding: 1rem;
-      width: 20vw;
-      background-color: #aaa;
-    }
-  } */
 `;
 export async function getServerSideProps() {
   const res = await db.clothes.findMany();

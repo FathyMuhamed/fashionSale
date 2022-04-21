@@ -9,7 +9,6 @@ function ActiveLink({ children, href }: ILink) {
   const style = {
     // marginRight: 5,
     color: link ? 'var(--main-bn-color)' : 'black',
-    
   };
 
   const handleClick = (e: { preventDefault: () => void }) => {

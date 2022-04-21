@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { CartIcon, UserIcon, WishlistIcon } from './../assert/icons';
 import ActiveLink from './ActiveLink';
-//style
+
 const Nav = styled.nav`
   display: flex;
   flex-direction: row;

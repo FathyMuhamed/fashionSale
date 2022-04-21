@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { WishlistIcon } from '../assert/icons';
 import { Border } from '../styles/globelStyles';
 export const Main = styled.div`
-  /* grid-template-columns: repeat(auto-fill, minmax(250px, 40vw)); */
   font-size: 2.3rem;
   height: 100vh;
   display: flex;
@@ -32,4 +31,3 @@ export default function Wishlist() {
     </Main>
   );
 }
-

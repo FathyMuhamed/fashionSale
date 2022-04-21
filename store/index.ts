@@ -1,6 +1,7 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import wishlist from './wishlist.slice';
 import cart from './cart.slice';
+
 export const store = configureStore({
   reducer: {
     wishlist,

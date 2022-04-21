@@ -1,1 +1,1 @@
-export { Container, Button, GlobalStyles } from './globelStyles';
+export { Container, Button, GlobalStyles} from './globelStyles';

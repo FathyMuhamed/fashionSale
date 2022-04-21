@@ -1,9 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Clothes } from '@prisma/client';
 import { Iclothes } from '../pages/Collections';
 import styled from 'styled-components';
 import { formatAsCurrency } from './../utils/formatAsCurrency';
-import Link from 'next/link';
 
 const CardStyle = styled.div`
   display: grid;

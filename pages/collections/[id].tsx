@@ -29,7 +29,6 @@ export async function getStaticProps({ params }: any) {
       props: JSON.parse(JSON.stringify(clothes)),
     };
   }
-
   return {
     redirect: {
       destination: '/',

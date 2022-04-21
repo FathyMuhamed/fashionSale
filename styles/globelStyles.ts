@@ -144,10 +144,6 @@ export const Container = styled.main`
   color: var(--color-pry);
   display: flex;
   flex-direction: column;
-
-  /* @media ${QUERIES.mobile} {
-    color: var(--color-900);
-  } */
 `;
 
 export const Border = styled.div`

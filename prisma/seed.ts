@@ -8,7 +8,6 @@ async function main() {
     data: clothes as any,
   });
 }
-
 main()
   .catch(e => {
     console.error(e);

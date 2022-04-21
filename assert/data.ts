@@ -33,7 +33,7 @@ export const clothes = [
     brand: 'American Eagle',
     category: 'HOODIES',
     name: 'Green Utility Hoodie',
-    price: 2800,
+    price: 2800, 
   },
   {
     brand: 'American Eagle',
@@ -52,5 +52,5 @@ export const clothes = [
     category: 'HOODIES',
     name: 'Green Active Camo Hoodie',
     price: 3100,
-  }
+  },
 ];

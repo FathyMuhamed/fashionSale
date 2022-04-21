@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 import { GlobalStyles } from './../styles';
 import { Container } from './../styles/globelStyles';
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -23,4 +23,3 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;

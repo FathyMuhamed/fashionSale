@@ -3,7 +3,7 @@ import { Border } from '../styles/globelStyles';
 import { CartIcon } from './../assert/icons';
 import { Main } from './Wishlist';
 
-function Cart() {
+export default function Cart() {
   return (
     <Main>
       <Border>
@@ -14,4 +14,3 @@ function Cart() {
   );
 }
 
-export default Cart;
