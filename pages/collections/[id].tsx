@@ -1,12 +1,13 @@
-import React from 'react';
 import styled from 'styled-components';
-import db from '../../prisma/index';
-import Image from 'next/image';
 import { Clothes } from '@prisma/client';
+import db from '../../prisma/index';
 import { formatAsCurrency } from '../../utils/formatAsCurrency';
 import { Button } from '../../styles';
 import Link from 'next/link';
 import { QUERIES } from '../../styles/mediaQueries';
+import { useAppDispatch } from './../../store/store.hook';
+import { setWishlist } from '../../store/wishlist.slice';
+import ImageCard from '../../components/ImageCard';
 export async function getStaticPaths() {
   const homes = await db.clothes.findMany({
     select: { id: true },
@@ -80,7 +81,24 @@ const CardItem = styled.div`
     }
   }
 `;
+interface Iitem {
+  id: string;
+  name: string;
+}
+
+
 function CollectionsItem({ name, brand, image, price, id }: Clothes) {
+  const dispatch = useAppDispatch();
+
+  const item = {
+    id,
+    name,
+    image,
+    price
+  };
+
+  const WishlistHandle = (items: Iitem) => dispatch(setWishlist(items));
+
   return (
     <>
       <Link href="/Collections" passHref>
@@ -91,14 +109,7 @@ function CollectionsItem({ name, brand, image, price, id }: Clothes) {
       <CardItem key={id}>
         <div className="image">
           {image ? (
-            <Image
-              src={image}
-              alt={name}
-              width={330}
-              objectFit="cover"
-              height={412}
-              layout={'responsive'}
-            />
+            <ImageCard alt={name} src={image} w={330} h={412} />
           ) : (
             <div className="imgFake"></div>
           )}
@@ -112,7 +123,7 @@ function CollectionsItem({ name, brand, image, price, id }: Clothes) {
             <div className="sizes"></div>
           </div>
           <div className="action">
-            <Button>Wishlist</Button>
+            <Button onClick={() => WishlistHandle(item)}>Wishlist</Button>
             <Button primary>Add to Cart</Button>
           </div>
         </div>

@@ -8,14 +8,21 @@ datasource db {
 }
 
 model Clothes {
-  id        String   @id @default(cuid())
-  image     String?
-  brand     String
-  name      String
-  category  Category
-  price     Float
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id         String    @id @default(cuid())
+  image      String?
+  brand      String
+  name       String
+  category   Category
+  price      Float
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  Wishlist   Wishlist? @relation(fields: [wishlistId], references: [id])
+  wishlistId String?
+}
+
+model Wishlist {
+  id      String    @id @default(cuid())
+  clothes Clothes[]
 }
 
 enum Category {

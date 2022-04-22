@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Clothes } from '@prisma/client';
 import { Iclothes } from '../pages/Collections';
 import styled from 'styled-components';
 import { formatAsCurrency } from './../utils/formatAsCurrency';
+import ImageCard from './ImageCard';
 
 const CardStyle = styled.div`
   display: grid;
@@ -44,14 +44,7 @@ export default function ItemCard({ clothes }: Iclothes) {
       <SingleItem>
         <div className="container-img">
           {image ? (
-            <Image
-              src={image}
-              alt={name}
-              layout="responsive"
-              width={250}
-              height={300}
-              objectFit="cover"
-            />
+            <ImageCard alt={name} src={image} w={250} h={300} />
           ) : (
             <div className="imgFake"></div>
           )}

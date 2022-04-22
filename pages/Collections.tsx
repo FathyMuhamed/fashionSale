@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { QUERIES } from './../styles/mediaQueries';
 import db from './../prisma';
 import { Clothes } from '@prisma/client';
 import ItemCard from '../components/ItemCard';

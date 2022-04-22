@@ -3,11 +3,11 @@ import { createSlice } from '@reduxjs/toolkit';
 const wishlistSlice = createSlice({
   name: 'wishlist',
   initialState: {
-    items: [],
+    items: []as any,
   },
   reducers: {
     setWishlist(state, action) {
-      state.items = action.payload;
+      state.items.push(action.payload) ;
     },
   },
 });
